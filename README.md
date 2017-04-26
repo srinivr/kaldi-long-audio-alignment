@@ -3,10 +3,12 @@ Long audio alignment using Kaldi. The algorithm is similar to the one in SAILALI
 
 Refer to "A RECURSIVE ALGORITHM FOR THE FORCED ALIGNMENT OF VERY LONG AUDIO SEGMENTS" and "A SYSTEM FOR AUTOMATIC ALIGNMENT OF BROADCAST MEDIA CAPTIONS USING WEIGHTED FINITE-STATE TRANSDUCERS" to get started.
 
-License:Apache License 2.0
-Copyright: Speech Lab (of [Prof. S Umesh](http://www.ee.iitm.ac.in/~umeshs/)), EE department, IIT Madras
-
 **NOTE:** Adaptation after each pass has not been implemented yet.
+
+**License:** Apache License 2.0
+
+**Copyright:** Speech Lab (of [Prof. S Umesh](http://www.ee.iitm.ac.in/~umeshs/)), EE department, IIT Madras
+
 
 <h2>Overview of the tool</h2>
 
