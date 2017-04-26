@@ -3,6 +3,9 @@ Long audio alignment using Kaldi. The algorithm is similar to the one in SAILALI
 
 Refer to "A RECURSIVE ALGORITHM FOR THE FORCED ALIGNMENT OF VERY LONG AUDIO SEGMENTS" and "A SYSTEM FOR AUTOMATIC ALIGNMENT OF BROADCAST MEDIA CAPTIONS USING WEIGHTED FINITE-STATE TRANSDUCERS" to get started.
 
+License:Apache License 2.0
+Copyright: Speech Lab (of [Prof. S Umesh](http://www.ee.iitm.ac.in/~umeshs/)), EE department, IIT Madras
+
 **NOTE:** Adaptation after each pass has not been implemented yet.
 
 <h2>Overview of the tool</h2>
@@ -13,7 +16,7 @@ The input, among others, is a directory containing **only one audio file** i.e w
 
 There are two top level scripts, **longaudio_multi_dir.sh** and **longaudio_alignment.sh**.
 
-**longaudio_multi_dir.sh** can be used if there are several audio files (and hence several directories) and/or if you want to append the segmented long audio to the train data. However, I am **not** going to explain the script now since I think this use case could be rare.
+**longaudio_multi_dir.sh** can be used if there are several audio files (and hence several directories) and/or if you want to append the segmented long audio to the train data. However, I am **not** going to explain this script now since I think this usecase could be rare.
 
 <h2>Running longaudio_alignment.sh</h2>
 

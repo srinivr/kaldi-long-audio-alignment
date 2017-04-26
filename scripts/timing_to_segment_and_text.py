@@ -7,7 +7,7 @@ key_name=sys.argv[2]
 segment_file_write_path=sys.argv[3]
 text_file_write_path=sys.argv[4]
 audio_end_time=sys.argv[5]
-
+num_words=10
 with codecs.open(word_timing_path,'r') as f:
 	word_timing_contents=f.readlines()
 
@@ -18,7 +18,7 @@ text_contents=[]
 
 for k in word_timing_contents:
 	# cntr=9 is we've seen 10 words
-	if cntr >= 9 or (idx+cntr+1) == len(word_timing_contents):
+	if cntr >= (num_words-1) or (idx+cntr+1) == len(word_timing_contents):
 		end_time = k.split(' ')[2]
 		if float(end_time) == -1.0 and (idx+cntr+1) == len(word_timing_contents):
 			end_time=audio_end_time

@@ -30,10 +30,11 @@ if [ "$update_train_dir" = true ]; then
 	rm  $train_dict/lexicon.txt.bkp  $train_dict/lexiconp.txt
 	mv $train_lang ${train_lang}.bkp
 	cat $train_dict/lexicon.txt | cut -d' ' -f2- | sed 's/ /\n/g' | grep -v '^$' | grep -v 'sil' | sort -u > $train_dict/nonsilence_phones.txt
-	utils/prepare_lang.sh $train_dict sil tmpdir $train_lang >> $log_dir/output.log 2> $log_dir>err.log
+	utils/prepare_lang.sh $train_dict sil tmpdir $train_lang >> $log_dir/output.log 2> $log_dir>err.log # sil is the <oov-dict-entry> change it match your settings
 
 	cp $train_dir/* $new_train_dir
 	rm $new_train_dir/cmvn.scp $new_train_dir/feats.scp
+	# create segments file for train_dir if it does not exist
 	if [ ! -f $new_train_dir/segments ]; then
 		wav-to-duration scp:$new_train_dir/wav.scp ark,t:$new_train_dir/wav_duration >> $log_dir/output.log 2> $log_dir>err.log
 		cut -d ' ' -f1 < $new_train_dir/wav_duration > $new_train_dir/wav_duration.1
