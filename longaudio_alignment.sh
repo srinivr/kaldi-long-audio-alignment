@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 . ./path.sh # ensure kaldi, IRSTLM and sctk are in path
 . ./cmd.sh
 . ./longaudio_vars.sh
@@ -68,8 +71,8 @@ scripts/build-trigram.sh $working_dir $working_dir/lm_text >> $log_dir/output.lo
 echo "Trigram LM created using $working_dir/lm_text"
 # build graph and decode
 echo "Executing build-graph-decode-hyp.sh"
-# TODO replace 20 with min(20, wc lines in feats.scp)
-scripts/build-graph-decode-hyp.sh 20 decode $working_dir $log_dir 2> $log_dir/err.log || exit 1
+num_lines=`wc -l $data_dir/feats.scp | cut -d' ' -f1` # min of num_lines and 20 for num_jobs
+scripts/build-graph-decode-hyp.sh $(($num_lines>20?20:$num_lines)) decode $working_dir $log_dir 2> $log_dir/err.log || exit 1
 echo "iter 0 decode over"
 # create a status file which specifies which segments are done and pending and save timing information for each aligned word
 num_text_words=`wc -w $working_dir/text_ints | cut -d' ' -f1`

@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 import sys
 from classes.entry import Entry
 from classes.entry_manager import EntryManager

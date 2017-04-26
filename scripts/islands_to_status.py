@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 # inputs:    res_ref_hyp, res_hyp_ref, actual_text, ctm
 # outputs:   status to final_status_file
 # caution: ensure ctm file is in the same order as the words in actual_text

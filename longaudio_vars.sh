@@ -1,3 +1,5 @@
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 set -e
 data_dir=`cat data/test_dir_location`
 lang_dir=data/lang_test

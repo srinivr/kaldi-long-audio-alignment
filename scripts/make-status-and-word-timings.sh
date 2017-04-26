@@ -1,4 +1,5 @@
-#. ./longaudio_vars.sh
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 . ./longaudio_vars.sh
 main_working_dir=$1
 working_dir=$2

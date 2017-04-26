@@ -1,3 +1,5 @@
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 from entry import Entry
 class EntryManager:
 	__statuses__ = ['PENDING','DONE']

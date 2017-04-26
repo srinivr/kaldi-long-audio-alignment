@@ -1,7 +1,7 @@
 #!/bin/bash
-# create a new directory for training data by:
-#	making approximately 15 seconds length segments from word timing information obtained by doing 0th iteration for the given directories
-#	note: include unaligned words whenever possible
+
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 set -e
 . ./path.sh
 update_train_dir=false

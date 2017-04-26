@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Copyright 2017  Speech Lab, EE Dept., IITM (Author: Srinivas Venkattaramanujam)
+
 # $1: nj
 # $2: decode directory name
 # $3  working directory path
