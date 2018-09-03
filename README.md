@@ -1,5 +1,5 @@
 # kaldi-long-audio-alignment
-Long audio alignment using Kaldi i.e chops a long audio and the corresponding transcript into multiple segments such that the transcripts for smaller segment are correct for the correcpoding audio segment. It is useful for ASR training since a long audio takes much more time than multiple small segments which constitute the long audio.
+Long audio alignment using Kaldi i.e chops a long audio and the corresponding transcript into multiple segments such that the transcripts for smaller segment correspond to the small audio segment. It is useful in ASR training since the small segments take much lesser total time compared to using the entire audio at once.
 
 The algorithm is similar to the one in SAILALIGN toolkit (https://github.com/nassosoassos/sail_align).
 
